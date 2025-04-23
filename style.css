@@ -1,0 +1,352 @@
+/* Global RTL Settings - The Core of the Demonstration */
+html {
+    direction: rtl; /* Sets the base direction for block elements and text */
+}
+
+body {
+    /* Use IBM Plex Sans Arabic for Arabic text, fallback to sans-serif */
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    text-align: right; /* Aligns text to the right by default */
+    line-height: 1.7; /* Slightly increased line height for better readability */
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Soft light background - Updated */
+    color: #333333; /* Default text color - Updated */
+    font-size: 1.1em; /* Slightly larger base font size */
+}
+
+/* Basic Structure Styling */
+header {
+    background-color: #4A6572; /* Primary blue-grey color - Updated */
+    color: white;
+    padding: 1.5em 2em; /* Increase padding */
+    text-align: center; /* Center header text */
+}
+
+header a {
+    color: rgba(255, 255, 255, 0.9); /* Lighter white for the link */
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 0.9em; /* Smaller font for the link */
+    border-bottom: 1px solid transparent; /* Add subtle border for hover */
+    transition: border-bottom 0.3s ease; /* Smooth transition */
+}
+
+header a:hover {
+    border-bottom: 1px solid white; /* Underline on hover */
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2em; /* Adjust heading size */
+    font-weight: 600; /* Semi-bold */
+}
+
+main {
+    max-width: 900px; /* Allow slightly wider content */
+    margin: 30px auto; /* Center the main content area, increase margin */
+    padding: 20px; /* Increase padding */
+    background-color: #FFFFFF; /* White background for content - Updated */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Softer, larger shadow */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+section {
+    margin-bottom: 2.5em; /* More space between sections */
+    padding-bottom: 1.5em; /* More space before the border */
+    border-bottom: 1px solid #EEEEEE; /* Lighter separator line - Updated */
+}
+
+section:last-of-type {
+    border-bottom: none; /* No border for the last section */
+    padding-bottom: 0;
+}
+
+h2 {
+    color: #4A6572; /* Use the primary blue-grey for section headings - Updated */
+    margin-bottom: 0.8em; /* More space below heading */
+    border-bottom: 3px solid #F9AA33; /* Accent color border - Updated */
+    display: inline-block; /* Make border only as wide as text */
+    padding-bottom: 5px; /* Space between text and border */
+    font-size: 1.6em; /* Adjust heading size */
+    font-weight: 600; /* Semi-bold */
+}
+
+h3 {
+    color: #333333; /* Color for sub-headings - Updated */
+    margin-top: 2em; /* More space above sub-heading */
+    margin-bottom: 0.8em;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.5em; /* More space below paragraphs */
+    line-height: 1.8; /* Increased line height for paragraphs */
+}
+
+/* Example Styling */
+.example {
+    background-color: #EEEEEE; /* Light grey background for examples - Updated */
+    border: 1px solid #CCCCCC; /* Border color - Updated */
+    padding: 15px 20px; /* Adjust padding */
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; /* Added margin below example box */
+    border-right: 5px solid #F9AA33; /* Accent border on the right (start in RTL) - Updated */
+    border-left: none; /* Ensure no conflicting border */
+    border-radius: 4px; /* Add slight rounded corners */
+}
+
+.example p {
+    margin-bottom: 1em; /* Less space within examples */
+    line-height: 1.6;
+}
+
+.example strong {
+    color: #555;
+}
+
+/* Styling for real-world examples section */
+.real-world {
+    margin-top: 2em;
+    padding: 15px 20px;
+    background-color: #FFF3E0; /* Soft yellow background for emphasis - Updated */
+    border: 1px solid #F9AA33; /* Border color - Updated */
+    border-right: 5px solid #F9AA33; /* Same accent color - Updated */
+    border-left: none;
+    border-radius: 4px;
+}
+
+.real-world h3 {
+    margin-top: 0; /* Remove top margin if it's the first element in .real-world */
+    margin-bottom: 1em;
+    color: #4A6572; /* Use primary blue-grey for the subheading here - Updated */
+}
+
+.real-world ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-right: 25px; /* Adjust padding for bullets */
+}
+
+.real-world li {
+    margin-bottom: 1em; /* Space between list items */
+    line-height: 1.6;
+}
+
+
+/* Styling for simulated code/layout examples */
+pre {
+    background-color: #E0E0E0; /* Slightly lighter than before */
+    padding: 12px; /* Increase padding */
+    border-radius: 6px; /* More rounded corners */
+    font-family: Consolas, Monaco, monospace; /* Monospace font */
+    direction: ltr; /* IMPORTANT: Keep code examples LTR for readability of the example itself */
+    text-align: left; /* Align code left */
+    white-space: pre-wrap; /* Wrap long lines */
+    word-break: break-all;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 0.95em; /* Slightly smaller font for code */
+}
+
+ul {
+    /* Browsers usually handle list marker position based on dir attribute */
+    padding-right: 25px; /* Ensure space for markers on the right */
+    padding-left: 0;
+    list-style-position: outside; /* Ensures markers are outside the text flow */
+    margin-bottom: 1.5em;
+}
+
+li {
+    margin-bottom: 0.8em;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center; /* Center footer text */
+    margin-top: 3em; /* More space above footer */
+    padding: 1.5em; /* Increase padding */
+    color: #555; /* Darker grey for footer text */
+    font-size: 1em; /* Slightly larger font for footer */
+    background-color: #EEEEEE; /* Light grey background for footer - Updated */
+}
+
+footer small {
+    display: block;
+    margin-top: 1em; /* More space above small text */
+    color: #777;
+    font-size: 0.85em;
+}
+
+/* --- New Styles for Table --- */
+.product-table-container {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    overflow-x: auto; /* Add horizontal scroll on small screens */
+    border: 1px solid #EEEEEE; /* Border color - Updated */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.product-status-table {
+    width: 100%; /* Make table take full width of container */
+    border-collapse: collapse; /* Remove space between borders */
+    text-align: right; /* Default text alignment for table content */
+}
+
+.product-status-table th,
+.product-status-table td {
+    padding: 12px 15px; /* Padding inside cells */
+    border: 1px solid #EEEEEE; /* Cell borders - Updated */
+}
+
+.product-status-table th {
+    background-color: #4A6572; /* Header background color - Updated */
+    color: white;
+    font-weight: 600;
+    text-align: center; /* Center table headers for better readability across directions */
+    white-space: nowrap; /* Prevent header text from wrapping unnecessarily */
+}
+
+.product-status-table tbody tr:nth-child(even) {
+    background-color: #F8F8F8; /* Zebra striping for rows - Updated */
+}
+
+.product-status-table td {
+    font-size: 0.95em; /* Slightly smaller font for table data */
+    vertical-align: top; /* Align cell content to top */
+}
+
+/* Status indicators (basic colors) - Updated Partial color */
+.status-poor { color: #E74C3C; font-weight: 600; } /* Red */
+.status-partial { color: #F9AA33; font-weight: 600; } /* Orange/Accent - Updated */
+.status-good { color: #2ECC71; font-weight: 600; } /* Green */
+.status-excellent { color: #3498DB; font-weight: 600; } /* Blue */
+
+
+/* --- New Styles for Action Buttons --- */
+.action-buttons {
+    text-align: center; /* Center the buttons */
+    margin-top: 3em;
+    margin-bottom: 2em;
+    padding-top: 1.5em;
+    border-top: 1px solid #EEEEEE; /* Separator line above buttons - Updated */
+}
+
+.action-buttons a.button {
+    display: inline-block;
+    background-color: #F9AA33; /* Accent color for buttons - Updated */
+    color: white;
+    padding: 12px 25px;
+    margin: 0 10px 15px 10px; /* Space between buttons */
+    text-decoration: none;
+    border-radius: 6px; /* Rounded corners */
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.action-buttons a.button:hover {
+    background-color: #E09500; /* Darker shade on hover - Updated */
+}
+
+.action-buttons a.button:active {
+    transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+/* Specific button style for secondary action */
+.action-buttons a.button.secondary {
+    background-color: #DDDDDD; /* Lighter grey - Updated */
+    color: #333;
+}
+
+.action-buttons a.button.secondary:hover {
+    background-color: #CCCCCC; /* Darker grey - Updated */
+}
+
+
+/* Responsive adjustments for table and buttons */
+@media (max-width: 768px) { /* Adjust breakpoint */
+    main {
+        margin: 20px;
+        padding: 15px;
+    }
+    header {
+        padding: 1em 1.5em;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    body {
+        font-size: 1em;
+    }
+    .real-world, .example {
+        padding: 10px 15px;
+    }
+    ul {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) { /* Add another breakpoint */
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    main {
+        margin: 15px;
+        padding: 10px;
+    }
+    .example, .real-world {
+        padding: 10px;
+    }
+    .product-status-table th,
+    .product-status-table td {
+        padding: 8px 10px;
+        font-size: 0.9em; /* Smaller font in table on small screens */
+    }
+
+    .action-buttons a.button {
+        display: block; /* Stack buttons on small screens */
+        margin: 0 auto 15px auto; /* Center and add vertical space */
+        max-width: 250px; /* Limit button width */
+    }
+}
+
+/* --- Styles for Comments Section --- */
+#comments-section {
+    margin-top: 3.5em; /* More space above section */
+    padding-top: 2em;
+    border-top: 1px solid #EEEEEE; /* Separator line - Updated */
+    margin-bottom: 2em; /* Space below section */
+}
+
+#comments-section h2 {
+    /* Adjust h2 style for this specific section */
+    margin-bottom: 1.5em;
+    border-bottom: none; /* Remove border */
+    display: block; /* Ensure it takes full width */
+    text-align: center; /* Center the heading */
+    color: #333333; /* Use text color */
+    font-size: 1.6em; /* Keep heading size */
+    font-weight: 600;
+}
+
+.comments-container {
+    /* Basic spacing around the loaded comments */
+    padding: 0 15px;
+}
