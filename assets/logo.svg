@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Rectangle -->
+  <rect x="0" y="0" width="120" height="40" rx="8" fill="#24935F"/>
+  
+  <!-- RTL Text -->
+  <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Perfectly Backwards</text>
+  
+  <!-- Directional Arrows -->
+  <path d="M15,15 L5,20 L15,25" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M105,15 L115,20 L105,25" stroke="#F5BD02" stroke-width="2" fill="none"/>
+</svg>

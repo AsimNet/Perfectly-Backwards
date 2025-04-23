@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="180" height="180" rx="40" fill="#24935F"/>
+  
+  <!-- Decorative Elements -->
+  <path d="M0,180 L180,0" stroke="#80519F" stroke-width="8" opacity="0.3"/>
+  <path d="M60,180 L180,60" stroke="#F5BD02" stroke-width="5" opacity="0.4"/>
+  
+  <!-- Logo Text -->
+  <text x="90" y="80" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Perfectly</text>
+  <text x="90" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Backwards</text>
+  
+  <!-- Directional Arrows -->
+  <path d="M60,130 L40,140 L60,150" stroke="white" stroke-width="4" fill="none"/>
+  <path d="M120,130 L140,140 L120,150" stroke="#F5BD02" stroke-width="4" fill="none"/>
+</svg>
