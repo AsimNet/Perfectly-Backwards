@@ -1,414 +1,665 @@
-/* Global RTL Settings - The Core of the Demonstration */
+/* =========================================
+   RTL Vision - Refactored Stylesheet
+   =========================================
+   Table of Contents:
+   1. CSS Variables
+   2. Base Styles
+   3. Typography
+   4. Layout & Containers
+   5. Navigation & Header
+   6. Content Sections
+   7. Examples & Demonstrations
+   8. Tables & Data Display
+   9. Forms & Interactive Elements
+   10. Tweet Section
+   11. Footer
+   12. Utility Classes
+   13. Media Queries
+   ========================================= */
+
+/* ----------------------------------------
+   1. CSS Variables
+   ---------------------------------------- */
+:root {
+    /* Colors */
+    --color-primary: #24935F;
+    --color-primary-light: #80519F;
+    --color-primary-dark: #344955;
+
+    --color-accent: #F5BD02;
+    --color-accent-light: #FFCC80;
+    --color-accent-dark: #E09500;
+
+    --color-background: #F5F5F5;
+    --color-card: #FFFFFF;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-text-muted: #777777;
+
+    --color-border: #EEEEEE;
+    --color-example-bg: #EEEEEE;
+    --color-real-world-bg: #FFF3E0;
+
+    --color-status-poor: #E74C3C;
+    --color-status-partial: #F9AA33;
+    --color-status-good: #2ECC71;
+    --color-status-excellent: #3498DB;
+
+    --color-twitter: #1DA1F2;
+    --color-twitter-dark: #0c85d0;
+    --color-linkedin: #0077B5;
+    --color-linkedin-dark: #005e8c;
+
+    /* Spacing */
+    --spacing-xs: 0.5em;
+    --spacing-sm: 0.8em;
+    --spacing-md: 1em;
+    --spacing-lg: 1.5em;
+    --spacing-xl: 2em;
+    --spacing-xxl: 2.5em;
+    --spacing-xxxl: 3em;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+/* ----------------------------------------
+   2. Base Styles
+   ---------------------------------------- */
 html {
     direction: rtl; /* Sets the base direction for block elements and text */
+    scroll-behavior: smooth;
 }
 
 body {
-    /* Use IBM Plex Sans Arabic for Arabic text, fallback to sans-serif */
     font-family: 'IBM Plex Sans Arabic', sans-serif;
-    text-align: right; /* Aligns text to the right by default */
-    line-height: 1.7; /* Slightly increased line height for better readability */
+    text-align: right;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #F5F5F5; /* Soft light background - Updated */
-    color: #333333; /* Default text color - Updated */
-    font-size: 1.1em; /* Slightly larger base font size */
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: 1.1em;
 }
 
-/* Basic Structure Styling */
-header {
-    background-color: #24935F; /* Primary blue-grey color - Updated */
-    color: white;
-    padding: 1.5em 2em; /* Increase padding */
-    text-align: center; /* Center header text */
+* {
+    box-sizing: border-box;
 }
 
-header a {
-    color: rgba(255, 255, 255, 0.9); /* Lighter white for the link */
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    font-size: 0.9em; /* Smaller font for the link */
-    border-bottom: 1px solid transparent; /* Add subtle border for hover */
-    transition: border-bottom 0.3s ease; /* Smooth transition */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-header a:hover {
-    border-bottom: 1px solid white; /* Underline on hover */
+/* ----------------------------------------
+   3. Typography
+   ---------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    line-height: 1.3;
+    color: var(--color-primary);
 }
-
 
 h1 {
-    margin: 0;
-    font-size: 2em; /* Adjust heading size */
-    font-weight: 600; /* Semi-bold */
-}
-
-main {
-    max-width: 900px; /* Allow slightly wider content */
-    margin: 30px auto; /* Center the main content area, increase margin */
-    padding: 20px; /* Increase padding */
-    background-color: #FFFFFF; /* White background for content - Updated */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Softer, larger shadow */
-    border-radius: 8px; /* Add rounded corners */
-}
-
-section {
-    margin-bottom: 2.5em; /* More space between sections */
-    padding-bottom: 1.5em; /* More space before the border */
-    border-bottom: 1px solid #EEEEEE; /* Lighter separator line - Updated */
-}
-
-section:last-of-type {
-    border-bottom: none; /* No border for the last section */
-    padding-bottom: 0;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
 }
 
 h2 {
-    color: #24935F; /* Use the primary blue-grey for section headings - Updated */
-    margin-bottom: 0.8em; /* More space below heading */
-    border-bottom: 3px solid #F5BD02; /* Accent color border - Updated */
-    display: inline-block; /* Make border only as wide as text */
-    padding-bottom: 5px; /* Space between text and border */
-    font-size: 1.6em; /* Adjust heading size */
-    font-weight: 600; /* Semi-bold */
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 3px solid var(--color-accent);
+    display: inline-block;
+    padding-bottom: var(--spacing-xs);
 }
 
 h3 {
-    color: #333333; /* Color for sub-headings - Updated */
-    margin-top: 2em; /* More space above sub-heading */
-    margin-bottom: 0.8em;
     font-size: 1.3em;
     font-weight: 600;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
 }
 
 p {
-    margin-bottom: 1.5em; /* More space below paragraphs */
-    line-height: 1.8; /* Increased line height for paragraphs */
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
 }
 
-/* Example Styling */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* ----------------------------------------
+   4. Layout & Containers
+   ---------------------------------------- */
+main {
+    max-width: 900px;
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-lg);
+    background-color: var(--color-card);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg);
+}
+
+section {
+    margin-bottom: var(--spacing-xxl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ----------------------------------------
+   5. Navigation & Header
+   ---------------------------------------- */
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+header a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    margin-top: var(--spacing-sm);
+    display: inline-block;
+    font-size: 0.9em;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom var(--transition-normal);
+}
+
+header a:hover {
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+/* ----------------------------------------
+   6. Content Sections
+   ---------------------------------------- */
+.section-title {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+.section-content {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ----------------------------------------
+   7. Examples & Demonstrations
+   ---------------------------------------- */
 .example {
-    background-color: #EEEEEE; /* Light grey background for examples - Updated */
-    border: 1px solid #CCCCCC; /* Border color - Updated */
-    padding: 15px 20px; /* Adjust padding */
-    margin-top: 1.5em;
-    margin-bottom: 1.5em; /* Added margin below example box */
-    border-right: 5px solid #F5BD02; /* Accent border on the right (start in RTL) - Updated */
-    border-left: none; /* Ensure no conflicting border */
-    border-radius: 4px; /* Add slight rounded corners */
+    background-color: var(--color-example-bg);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    border-right: 5px solid var(--color-accent);
+    border-left: none;
+    border-radius: var(--radius-sm);
 }
 
 .example p {
-    margin-bottom: 1em; /* Less space within examples */
+    margin-bottom: var(--spacing-md);
     line-height: 1.6;
 }
 
 .example strong {
-    color: #555;
+    color: var(--color-text);
 }
 
-/* Styling for real-world examples section */
 .real-world {
-    margin-top: 2em;
-    padding: 15px 20px;
-    background-color: #FFF3E0; /* Soft yellow background for emphasis - Updated */
-    border: 1px solid #F5BD02; /* Border color - Updated */
-    border-right: 5px solid #F5BD02; /* Same accent color - Updated */
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg);
+    background-color: var(--color-real-world-bg);
+    border: 1px solid var(--color-accent);
+    border-right: 5px solid var(--color-accent);
     border-left: none;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .real-world h3 {
-    margin-top: 0; /* Remove top margin if it's the first element in .real-world */
-    margin-bottom: 1em;
-    color: #24935F; /* Use primary blue-grey for the subheading here - Updated */
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
 }
 
 .real-world ul {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-right: 25px; /* Adjust padding for bullets */
+    margin: var(--spacing-md) 0;
+    padding-right: var(--spacing-xl);
 }
 
 .real-world li {
-    margin-bottom: 1em; /* Space between list items */
+    margin-bottom: var(--spacing-md);
     line-height: 1.6;
 }
 
-
-/* Styling for simulated code/layout examples */
+/* Code examples */
 pre {
-    background-color: #E0E0E0; /* Slightly lighter than before */
-    padding: 12px; /* Increase padding */
-    border-radius: 6px; /* More rounded corners */
-    font-family: Consolas, Monaco, monospace; /* Monospace font */
-    direction: ltr; /* IMPORTANT: Keep code examples LTR for readability of the example itself */
-    text-align: left; /* Align code left */
-    white-space: pre-wrap; /* Wrap long lines */
+    background-color: var(--color-example-bg);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    font-family: Consolas, Monaco, monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre-wrap;
     word-break: break-all;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 0.95em; /* Slightly smaller font for code */
+    margin: var(--spacing-md) 0;
+    font-size: 0.95em;
+    overflow-x: auto;
 }
 
+/* Lists */
 ul {
-    /* Browsers usually handle list marker position based on dir attribute */
-    padding-right: 25px; /* Ensure space for markers on the right */
+    padding-right: var(--spacing-xl);
     padding-left: 0;
-    list-style-position: outside; /* Ensures markers are outside the text flow */
-    margin-bottom: 1.5em;
+    list-style-position: outside;
+    margin-bottom: var(--spacing-lg);
 }
 
 li {
-    margin-bottom: 0.8em;
+    margin-bottom: var(--spacing-md);
 }
 
-
-/* Footer Styling */
-footer {
-    text-align: center; /* Center footer text */
-    margin-top: 3em; /* More space above footer */
-    padding: 1.5em; /* Increase padding */
-    color: #555; /* Darker grey for footer text */
-    font-size: 1em; /* Slightly larger font for footer */
-    background-color: #EEEEEE; /* Light grey background for footer - Updated */
-}
-
-footer small {
-    display: block;
-    margin-top: 1em; /* More space above small text */
-    color: #777;
-    font-size: 0.85em;
-}
-
-/* --- New Styles for Table --- */
+/* ----------------------------------------
+   8. Tables & Data Display
+   ---------------------------------------- */
 .product-table-container {
-    margin-top: 2.5em;
-    margin-bottom: 2.5em;
-    overflow-x: auto; /* Add horizontal scroll on small screens */
-    border: 1px solid #EEEEEE; /* Border color - Updated */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: var(--spacing-xl) 0;
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .product-status-table {
-    width: 100%; /* Make table take full width of container */
-    border-collapse: collapse; /* Remove space between borders */
-    text-align: right; /* Default text alignment for table content */
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
 }
 
 .product-status-table th,
 .product-status-table td {
-    padding: 12px 15px; /* Padding inside cells */
-    border: 1px solid #EEEEEE; /* Cell borders - Updated */
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
 }
 
 .product-status-table th {
-    background-color: #24935F; /* Header background color - Updated */
+    background-color: var(--color-primary);
     color: white;
     font-weight: 600;
-    text-align: center; /* Center table headers for better readability across directions */
-    white-space: nowrap; /* Prevent header text from wrapping unnecessarily */
+    text-align: center;
+    white-space: nowrap;
 }
 
 .product-status-table tbody tr:nth-child(even) {
-    background-color: #F8F8F8; /* Zebra striping for rows - Updated */
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .product-status-table td {
-    font-size: 0.95em; /* Slightly smaller font for table data */
-    vertical-align: top; /* Align cell content to top */
+    font-size: 0.95em;
+    vertical-align: top;
 }
 
-/* Status indicators (basic colors) - Updated Partial color */
-.status-poor { color: #E74C3C; font-weight: 600; } /* Red */
-.status-partial { color: #F5BD02; font-weight: 600; } /* Orange/Accent - Updated */
-.status-good { color: #2ECC71; font-weight: 600; } /* Green */
-.status-excellent { color: #3498DB; font-weight: 600; } /* Blue */
+/* Status indicators */
+.status-poor {
+    color: var(--color-status-poor);
+    font-weight: 600;
+}
 
+.status-partial {
+    color: var(--color-status-partial);
+    font-weight: 600;
+}
 
-/* --- New Styles for Action Buttons --- */
+.status-good {
+    color: var(--color-status-good);
+    font-weight: 600;
+}
+
+.status-excellent {
+    color: var(--color-status-excellent);
+    font-weight: 600;
+}
+
+/* ----------------------------------------
+   9. Forms & Interactive Elements
+   ---------------------------------------- */
 .action-buttons {
-    text-align: center; /* Center the buttons */
-    margin-top: 3em;
-    margin-bottom: 2em;
-    padding-top: 1.5em;
-    border-top: 1px solid #EEEEEE; /* Separator line above buttons - Updated */
+    text-align: center;
+    margin-top: var(--spacing-xxxl);
+    margin-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
 }
 
-/* --- Tweet This Section Styles --- */
-.tweet-section {
-    background-color: #80519F; /* Lighter shade of primary color */
+.button,
+.action-buttons a.button {
+    display: inline-block;
+    background-color: var(--color-accent);
     color: white;
-    padding: 2em;
-    border-radius: 8px;
-    margin: 3em auto;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin: 0 var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover,
+.action-buttons a.button:hover {
+    background-color: var(--color-accent-dark);
+    color: white;
+}
+
+.button:active,
+.action-buttons a.button:active {
+    transform: scale(0.98);
+}
+
+.button.secondary,
+.action-buttons a.button.secondary {
+    background-color: #DDDDDD;
+    color: var(--color-text);
+}
+
+.button.secondary:hover,
+.action-buttons a.button.secondary:hover {
+    background-color: #CCCCCC;
+}
+
+/* ----------------------------------------
+   10. Tweet Section
+   ---------------------------------------- */
+.tweet-section {
+    background-color: var(--color-primary-light);
+    color: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin: var(--spacing-xxxl) auto;
     max-width: 900px;
     position: relative;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-md);
 }
 
 .tweet-section h2 {
     color: white;
     margin-top: 0;
-    border-bottom: 3px solid #F5BD02;
+    border-bottom: 3px solid var(--color-accent);
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: var(--spacing-xs);
 }
 
 .tweet-box {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 1.5em;
-    margin: 1.5em 0;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
     text-align: right;
 }
 
 .tweet-text {
     font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 1.5em;
+    margin-bottom: var(--spacing-lg);
     color: rgba(255, 255, 255, 0.95);
 }
 
+/* Share buttons container */
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* Base button styles */
 .tweet-section .button {
-    background-color: #1DA1F2; /* Twitter blue */
     color: white;
-    padding: 12px 25px;
-    margin: 0 10px 15px 10px;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin: 0 var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     font-size: 1.1em;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
     border: none;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--spacing-sm);
+    min-width: 160px;
+    justify-content: center;
 }
 
-.tweet-section .button:hover {
-    background-color: #0c85d0; /* Darker Twitter blue */
+/* Twitter button specific styles */
+.tweet-section .twitter-button {
+    background-color: var(--color-twitter);
+}
+
+.tweet-section .twitter-button:hover {
+    background-color: var(--color-twitter-dark);
+}
+
+/* LinkedIn button specific styles */
+.tweet-section .linkedin-button {
+    background-color: var(--color-linkedin);
+}
+
+.tweet-section .linkedin-button:hover {
+    background-color: var(--color-linkedin-dark);
 }
 
 .tweet-section .button i {
     font-size: 1.2em;
 }
 
-.action-buttons a.button {
-    display: inline-block;
-    background-color: #F5BD02; /* Accent color for buttons - Updated */
-    color: white;
-    padding: 12px 25px;
-    margin: 0 10px 15px 10px; /* Space between buttons */
-    text-decoration: none;
-    border-radius: 6px; /* Rounded corners */
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Indicate it's clickable */
+/* ----------------------------------------
+   11. Footer
+   ---------------------------------------- */
+footer {
+    text-align: center;
+    margin-top: var(--spacing-xxxl);
+    padding: var(--spacing-lg);
+    color: var(--color-text-light);
+    font-size: 1em;
+    background-color: var(--color-example-bg);
 }
 
-.action-buttons a.button:hover {
-    background-color: #E09500; /* Darker shade on hover - Updated */
+footer small {
+    display: block;
+    margin-top: var(--spacing-md);
+    color: var(--color-text-muted);
+    font-size: 0.85em;
 }
 
-.action-buttons a.button:active {
-    transform: scale(0.98); /* Slightly shrink when clicked */
+footer a {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
-/* Specific button style for secondary action */
-.action-buttons a.button.secondary {
-    background-color: #DDDDDD; /* Lighter grey - Updated */
-    color: #333;
+footer a:hover {
+    color: var(--color-primary-dark);
 }
 
-.action-buttons a.button.secondary:hover {
-    background-color: #CCCCCC; /* Darker grey - Updated */
+/* ----------------------------------------
+   12. Utility Classes
+   ---------------------------------------- */
+.text-center {
+    text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
 
-/* Responsive adjustments for table and buttons */
-@media (max-width: 768px) { /* Adjust breakpoint */
+.text-left {
+    text-align: left;
+}
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.my-0 { margin-top: 0; margin-bottom: 0; }
+
+.mt-1 { margin-top: var(--spacing-sm); }
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.my-1 { margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
+
+.mt-2 { margin-top: var(--spacing-md); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.my-2 { margin-top: var(--spacing-md); margin-bottom: var(--spacing-md); }
+
+.mt-3 { margin-top: var(--spacing-lg); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+.my-3 { margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+
+.mt-4 { margin-top: var(--spacing-xl); }
+.mb-4 { margin-bottom: var(--spacing-xl); }
+.my-4 { margin-top: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+
+.mt-5 { margin-top: var(--spacing-xxl); }
+.mb-5 { margin-bottom: var(--spacing-xxl); }
+.my-5 { margin-top: var(--spacing-xxl); margin-bottom: var(--spacing-xxl); }
+
+/* ----------------------------------------
+   13. Media Queries
+   ---------------------------------------- */
+@media (max-width: 768px) {
     main {
-        margin: 20px;
-        padding: 15px;
+        margin: var(--spacing-md);
+        padding: var(--spacing-md);
     }
+
     header {
-        padding: 1em 1.5em;
+        padding: var(--spacing-md) var(--spacing-lg);
     }
+
     h1 {
         font-size: 1.8em;
     }
+
     h2 {
         font-size: 1.4em;
     }
+
     h3 {
         font-size: 1.1em;
     }
+
     body {
         font-size: 1em;
     }
+
     .real-world, .example {
-        padding: 10px 15px;
+        padding: var(--spacing-md);
     }
+
     ul {
-        padding-right: 20px;
+        padding-right: var(--spacing-lg);
+    }
+
+    .tweet-section {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-xl) var(--spacing-md);
     }
 }
 
-@media (max-width: 600px) { /* Add another breakpoint */
+@media (max-width: 600px) {
     h1 {
         font-size: 1.5em;
     }
+
     h2 {
         font-size: 1.3em;
     }
+
     main {
-        margin: 15px;
-        padding: 10px;
+        margin: var(--spacing-sm);
+        padding: var(--spacing-sm);
     }
+
     .example, .real-world {
-        padding: 10px;
+        padding: var(--spacing-sm);
     }
+
     .product-status-table th,
     .product-status-table td {
-        padding: 8px 10px;
-        font-size: 0.9em; /* Smaller font in table on small screens */
+        padding: var(--spacing-sm);
+        font-size: 0.9em;
     }
 
+    .button,
     .action-buttons a.button {
-        display: block; /* Stack buttons on small screens */
-        margin: 0 auto 15px auto; /* Center and add vertical space */
-        max-width: 250px; /* Limit button width */
+        display: block;
+        margin: 0 auto var(--spacing-md) auto;
+        max-width: 250px;
     }
-}
 
-/* --- Styles for Comments Section --- */
-#comments-section {
-    margin-top: 3.5em; /* More space above section */
-    padding-top: 2em;
-    border-top: 1px solid #EEEEEE; /* Separator line - Updated */
-    margin-bottom: 2em; /* Space below section */
-}
+    .tweet-section {
+        padding: var(--spacing-md);
+    }
 
-#comments-section h2 {
-    /* Adjust h2 style for this specific section */
-    margin-bottom: 1.5em;
-    border-bottom: none; /* Remove border */
-    display: block; /* Ensure it takes full width */
-    text-align: center; /* Center the heading */
-    color: #333333; /* Use text color */
-    font-size: 1.6em; /* Keep heading size */
-    font-weight: 600;
-}
-
-.comments-container {
-    /* Basic spacing around the loaded comments */
-    padding: 0 15px;
+    .tweet-box {
+        padding: var(--spacing-md);
+    }
 }
