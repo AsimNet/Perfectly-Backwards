@@ -17,7 +17,7 @@ body {
 
 /* Basic Structure Styling */
 header {
-    background-color: #4A6572; /* Primary blue-grey color - Updated */
+    background-color: #24935F; /* Primary blue-grey color - Updated */
     color: white;
     padding: 1.5em 2em; /* Increase padding */
     text-align: center; /* Center header text */
@@ -65,9 +65,9 @@ section:last-of-type {
 }
 
 h2 {
-    color: #4A6572; /* Use the primary blue-grey for section headings - Updated */
+    color: #24935F; /* Use the primary blue-grey for section headings - Updated */
     margin-bottom: 0.8em; /* More space below heading */
-    border-bottom: 3px solid #F9AA33; /* Accent color border - Updated */
+    border-bottom: 3px solid #F5BD02; /* Accent color border - Updated */
     display: inline-block; /* Make border only as wide as text */
     padding-bottom: 5px; /* Space between text and border */
     font-size: 1.6em; /* Adjust heading size */
@@ -94,7 +94,7 @@ p {
     padding: 15px 20px; /* Adjust padding */
     margin-top: 1.5em;
     margin-bottom: 1.5em; /* Added margin below example box */
-    border-right: 5px solid #F9AA33; /* Accent border on the right (start in RTL) - Updated */
+    border-right: 5px solid #F5BD02; /* Accent border on the right (start in RTL) - Updated */
     border-left: none; /* Ensure no conflicting border */
     border-radius: 4px; /* Add slight rounded corners */
 }
@@ -113,8 +113,8 @@ p {
     margin-top: 2em;
     padding: 15px 20px;
     background-color: #FFF3E0; /* Soft yellow background for emphasis - Updated */
-    border: 1px solid #F9AA33; /* Border color - Updated */
-    border-right: 5px solid #F9AA33; /* Same accent color - Updated */
+    border: 1px solid #F5BD02; /* Border color - Updated */
+    border-right: 5px solid #F5BD02; /* Same accent color - Updated */
     border-left: none;
     border-radius: 4px;
 }
@@ -122,7 +122,7 @@ p {
 .real-world h3 {
     margin-top: 0; /* Remove top margin if it's the first element in .real-world */
     margin-bottom: 1em;
-    color: #4A6572; /* Use primary blue-grey for the subheading here - Updated */
+    color: #24935F; /* Use primary blue-grey for the subheading here - Updated */
 }
 
 .real-world ul {
@@ -205,7 +205,7 @@ footer small {
 }
 
 .product-status-table th {
-    background-color: #4A6572; /* Header background color - Updated */
+    background-color: #24935F; /* Header background color - Updated */
     color: white;
     font-weight: 600;
     text-align: center; /* Center table headers for better readability across directions */
@@ -223,7 +223,7 @@ footer small {
 
 /* Status indicators (basic colors) - Updated Partial color */
 .status-poor { color: #E74C3C; font-weight: 600; } /* Red */
-.status-partial { color: #F9AA33; font-weight: 600; } /* Orange/Accent - Updated */
+.status-partial { color: #F5BD02; font-weight: 600; } /* Orange/Accent - Updated */
 .status-good { color: #2ECC71; font-weight: 600; } /* Green */
 .status-excellent { color: #3498DB; font-weight: 600; } /* Blue */
 
@@ -237,9 +237,71 @@ footer small {
     border-top: 1px solid #EEEEEE; /* Separator line above buttons - Updated */
 }
 
+/* --- Tweet This Section Styles --- */
+.tweet-section {
+    background-color: #80519F; /* Lighter shade of primary color */
+    color: white;
+    padding: 2em;
+    border-radius: 8px;
+    margin: 3em auto;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tweet-section h2 {
+    color: white;
+    margin-top: 0;
+    border-bottom: 3px solid #F5BD02;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.tweet-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    text-align: right;
+}
+
+.tweet-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.tweet-section .button {
+    background-color: #1DA1F2; /* Twitter blue */
+    color: white;
+    padding: 12px 25px;
+    margin: 0 10px 15px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tweet-section .button:hover {
+    background-color: #0c85d0; /* Darker Twitter blue */
+}
+
+.tweet-section .button i {
+    font-size: 1.2em;
+}
+
 .action-buttons a.button {
     display: inline-block;
-    background-color: #F9AA33; /* Accent color for buttons - Updated */
+    background-color: #F5BD02; /* Accent color for buttons - Updated */
     color: white;
     padding: 12px 25px;
     margin: 0 10px 15px 10px; /* Space between buttons */
