@@ -16,15 +16,7 @@
     <meta property="og:url" content="https://asimnet.github.io/Perfectly-Backwards/arabic.html">
     <meta property="og:title" content="Perfectly Backwards - نحو عالم رقمي شامل للغة العربية">
     <meta property="og:description" content="رفع الوعي حول أهمية دعم اللغة العربية وخصائص الكتابة من اليمين إلى اليسار (RTL) في المنتجات الرقمية. تعرف على التحديات والحلول لتحسين تجربة المستخدم العربي.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/AsimNet/Perfectly-Backwards/refs/heads/main/assets/logo.svg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://asimnet.github.io/Perfectly-Backwards/arabic.html">
-    <meta property="twitter:title" content="Perfectly Backwards - نحو عالم رقمي شامل للغة العربية">
-    <meta property="twitter:description" content="رفع الوعي حول أهمية دعم اللغة العربية وخصائص الكتابة من اليمين إلى اليسار (RTL) في المنتجات الرقمية. تعرف على التحديات والحلول لتحسين تجربة المستخدم العربي.">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/AsimNet/Perfectly-Backwards/refs/heads/main/assets/logo.svg">
-    <meta name="twitter:creator" content="@asimnet">
+    <meta property="og:image" content="https://perfectly-backwards.com/assets/og_ar.png">
 
     <!-- Canonical Link -->
     <link rel="canonical" href="https://asimnet.github.io/Perfectly-Backwards/arabic.html">
@@ -101,19 +93,36 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@asimnet">
+    <meta name="twitter:title" content="Perfectly Backwards - دعم اللغات RTL">
+    <meta name="twitter:description" content="أنا أدعم تحسين دعم اللغة العربية في المنتجات الرقمية! تعرف على مشروع Perfectly-Backwards لمعرفة المزيد حول إنشاء تجارب رقمية شاملة.">
+    <meta name="twitter:image" content="https://perfectly-backwards.com/assets/og_ar.png">
+    <meta name="twitter:creator" content="@asimnet">
+    <meta name="twitter:url" content="https://perfectly-backwards.com">
+
+    <!-- Open Graph tags for LinkedIn -->
+    <meta property="og:title" content="Perfectly Backwards - دعم اللغات RTL">
+    <meta property="og:description" content="أنا أدعم تحسين دعم اللغة العربية في المنتجات الرقمية! تعرف على مشروع Perfectly-Backwards لمعرفة المزيد حول إنشاء تجارب رقمية شاملة.">
+    <meta property="og:image" content="https://perfectly-backwards.com/assets/og_ar.png">
+    <meta property="og:url" content="https://perfectly-backwards.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Perfectly Backwards">
 </head>
 <body>
 
 <header>
     <h1>Perfectly Backwards - معكوس بإتقان!</h1>
-    <p><a href="index.html">اقرأ بالإنجليزية</a></p>
+    <p><a href="index.html">Read in English</a></p>
 </header>
 
 <main>
     <section id="introduction">
         <h2>نداء إلى صناع القرار: لنجعل العربية ركيزة أساسية في المنتجات الرقمية</h2>
         <p>
-            أيها الناس!، إلى صناع القرار في مؤسساتنا الحكومية وشركاتنا الكبرى، تحية طيبة وبعد.
+             إلى صناع القرار في مؤسساتنا الحكومية وشركاتنا الكبرى، تحية طيبة وبعد.
         </p>
         <p>
             في عصر التحول الرقمي المتسارع، أصبحت الأدوات والمنصات الرقمية جزءاً لا يتجزأ من حياتنا اليومية وعملياتنا المؤسسية. ومع ذلك، يواجه ملايين المستخدمين الناطقين باللغة العربية تحديات مستمرة وإحباطاً يومياً عند استخدام هذه الأدوات، ليس بسبب تعقيدها، بل بسبب قصور دعمها للغتنا العربية وخصائصها الفريدة، وعلى رأسها خاصية الكتابة من اليمين إلى اليسار (RTL).
@@ -147,6 +156,48 @@
         </p>
     </section>
 
+    <section id="bidi-issue">
+        <h2>توضيح المشكلة: النص المختلط (Bidi)</h2>
+        <p>
+            يظهر في الصورة أدناه مثال على مشكلة النص المختلط (Bidi). يحاول المستخدم كتابة النص التالي:
+            <strong>جمال اللغة يكمن في تفاصيلها، والـRTL ليس ترفا، بل ضرورة والسلام PEACE</strong>
+            ولكن كما هو موضح، تحدث مشاكل في ترتيب النصوص واتجاه المؤشر، مما يجعل الكتابة تجربة محبطة.
+        </p>
+        <div class="gif-container" aria-label="Teams does not handle it correctly">
+            <img src="assets/teams.gif" alt="مثال على مشكلة النص المختلط (Bidi)" style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 10px;">
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #555;">المصدر: Microsoft Teams</p>
+        </div>
+
+        <div class="gif-container" aria-label="whatsapp does it correctly">
+            <img src="assets/whatsapp.gif" alt="مثال على عرض النص المختلط (Bidi) بشكل صحيح في واتساب" style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 10px;">
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #555;">واتساب فعلها بشكل صحيح! ليست صعبة إذا!</p>
+        </div>
+    </section>
+
+    <section id="eastern-arabic-numbers">
+        <h2>دعم الأرقام العربية الشرقية</h2>
+        <p>
+            نقطة أخرى لا تقل أهمية عن دعم RTL هي دعم الأرقام العربية الشرقية (الهندية) مثل:
+            <strong>١٢٣٤٥</strong>.
+            هذه مشكلة كبيرة تواجه المستخدمين العرب، حيث أن معظم التطبيقات لا تدعمها بشكل صحيح،
+            بما في ذلك بعض التطبيقات الحكومية مثل <strong>أبشر</strong>.
+        </p>
+        <p>
+            على سبيل المثال، عند كتابة الأرقام في بعض التطبيقات، يتم عرضها بالأرقام الغربية (12345)
+            بدلاً من الأرقام العربية الشرقية (١٢٣٤٥)، مما يسبب إرباكاً للمستخدمين الذين اعتادوا على الأرقام الشرقية.
+        </p>
+        <div class="example">
+            <p><strong>مثال:</strong></p>
+            <p>الأرقام العربية الغربية: 12345</p>
+            <p>الأرقام العربية الشرقية: ١٢٣٤٥</p>
+        </div>
+        <p>
+            إن دعم الأرقام العربية الشرقية ليس مجرد تحسين بصري، بل هو جزء أساسي من تجربة المستخدم العربي
+            ويجب أن يكون معياراً في جميع التطبيقات التي تستهدف المستخدمين الناطقين بالعربية.
+        </p>
+    </section>
+
+
     <section id="our-proposal">
         <h2>الحل: بند إلزامي في عقود المشتريات</h2>
         <p>
@@ -172,35 +223,38 @@
                 <tr>
                     <th>اسم المنتج</th>
                     <th>الفئة</th>
-                    <th>دعم قراءة RTL</th>
-                    <th>دعم كتابة RTL</th>
+                    <th>دعم RTL</th>
                     <th>ملاحظات / مشاكل شائعة</th>
                     <th>آخر تحديث</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Slack</td>
-                    <td>تعاون/رسائل</td>
-                    <td class="status-partial">جزئي</td>
-                    <td class="status-partial">جزئي</td>
-                    <td>مشاكل في تدفق النص المختلط LTR/RTL، قفز المؤشر، وتنسيق كتل النصوص البرمجية/الروابط داخل الرسائل العربية.</td>
+                    <td>SAP ERP</td>
+                    <td>نظام تخطيط موارد المؤسسات</td>
+                    <td class="status-poor">ضعيف</td>
+                    <td>دعم جيد للعرض باللغة العربية، لكن بعض المشاكل في إدخال البيانات المختلطة وتقارير BI. واجهة المستخدم تدعم RTL بشكل عام.</td>
                     <td>أبريل 2025</td>
                 </tr>
                 <tr>
-                    <td>Jira (Atlassian)</td>
-                    <td>إدارة مشاريع/تتبع مهام</td>
+                    <td>Oracle ERP Cloud</td>
+                    <td>نظام تخطيط موارد سحابي</td>
                     <td class="status-poor">ضعيف</td>
-                    <td class="status-poor">ضعيف</td>
-                    <td>مشاكل كبيرة في الأوصاف، التعليقات، والحقول المخصصة. محاذاة النص والاتجاه ومشاكل Bidi تجعله محبطاً للمستخدمين العرب.</td>
+                    <td>دعم متوسط للغة العربية، مشاكل في تنسيق التقارير المالية والمستندات ذات النصوص المختلطة. بعض الوحدات لا تدعم RTL بشكل كامل.</td>
                     <td>أبريل 2025</td>
                 </tr>
                 <tr>
-                    <td>Trello</td>
-                    <td>إدارة مشاريع/لوحة مهام</td>
-                    <td class="status-partial">جزئي</td>
+                    <td>Microsoft Dynamics 365</td>
+                    <td>نظام إدارة علاقات العملاء وموارد المؤسسات</td>
                     <td class="status-poor">ضعيف</td>
-                    <td>صعوبات في كتابة عناوين البطاقات وأوصافها وتعليقاتها، خاصة عند دمج عناصر LTR. غالباً ما يصبح النص مشوشاً.</td>
+                    <td>دعم جيد نسبياً للغة العربية، لكن توجد مشاكل في لوحات المعلومات والتقارير المخصصة. بعض المشاكل في إدخال البيانات المختلطة.</td>
+                    <td>أبريل 2025</td>
+                </tr>
+                <tr>
+                    <td>Odoo ERP</td>
+                    <td>نظام تخطيط موارد مفتوح المصدر</td>
+                    <td class="status-poor">ضعيف</td>
+                    <td>دعم محدود للغة العربية، مشاكل في واجهة المستخدم وإدخال البيانات. تحديات كبيرة في التقارير والمستندات ذات النصوص المختلطة.</td>
                     <td>أبريل 2025</td>
                 </tr>
                 </tbody>
@@ -209,12 +263,6 @@
 
     </section>
 
-    <section id="acknowledgement">
-        <h2>شكر خاص: مايكروسوفت نموذج يحتذى به</h2>
-        <p>
-            لا يفوتنا في هذا المقام أن نشكر شركة مايكروسوفت شكراً جزيلاً على جهودها المستمرة ودعمها المتميز للغة العربية وخصائص RTL عبر مجموعة واسعة من منتجاتها وأنظمتها (مثل نظام ويندوز، حزمة أوفيس، متصفح إيدج، أدوات المطورين). لقد كانت مايكروسوفت ولا تزال في طليعة الشركات العالمية التي تدرك أهمية دعم لغتنا وتقدم نماذج يحتذى بها في هذا المجال. نتمنى أن تحذو بقية الشركات حذوها.
-        </p>
-    </section>
 
     <section id="conclusion">
         <h2>خاتمة: نحو مستقبل رقمي شامل بالعربية</h2>
@@ -256,13 +304,12 @@
     </p>
 
     <div class="tweet-box">
-        <p class="tweet-text">أنا أدعم تحسين دعم اللغة العربية في المنتجات الرقمية! تعرف على مشروع #PerfectlyBackwards من @asimnet لمعرفة المزيد حول إنشاء تجارب رقمية شاملة. https://asimnet.github.io/Perfectly-Backwards/</p>
-
+        <p class="tweet-text">أنا أدعم تحسين دعم اللغة العربية في المنتجات الرقمية! تعرف على مشروع #PerfectlyBackwards لمعرفة المزيد حول إنشاء تجارب رقمية شاملة. https://perfectly-backwards.com</p>
         <div class="share-buttons">
-            <a href="https://twitter.com/intent/tweet?text=%D8%AA%D8%AC%D8%B1%D8%A8%D8%AA%D9%8A%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D8%BA%D8%A7%D9%84%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A7%20%D8%AA%D9%83%D9%88%D9%86%20%23PerfectlyBackwards%20%D8%A8%D8%B3%D8%A8%D8%A8%20%D8%B6%D8%B9%D9%81%20%D8%AF%D8%B9%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D9%88%20RTL%21%20%F0%9F%98%A9%20%D8%A7%D8%B9%D8%B1%D9%81%D9%88%D8%A7%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%A7%D9%83%D9%84%20%D8%A7%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D8%B2%D8%B9%D8%AC%D8%A9%20%D9%88%D8%A7%D8%AF%D8%B9%D9%85%D9%88%D8%A7%20%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%84%D8%AA%D8%AD%D8%B3%D9%8A%D9%86%20%23%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D8%A8_%D8%A3%D9%88%D9%84%D9%88%D9%8A%D8%A9%20%23UX_AR%3A%20https%3A%2F%2Fasimnet.github.io%2FPerfectly-Backwards%2F%20%40AsimNet" class="button twitter-button" target="_blank">
+            <a href="https://twitter.com/intent/tweet?text=%D8%AA%D8%AC%D8%B1%D8%A8%D8%AA%D9%8A%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20%D8%BA%D8%A7%D9%84%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A7%20%D8%AA%D9%83%D9%88%D9%86%20%23PerfectlyBackwards%20%D8%A8%D8%B3%D8%A8%D8%A8%20%D8%B6%D8%B9%D9%81%20%D8%AF%D8%B9%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D9%88%20RTL%21%20%F0%9F%98%A9%20%D8%A7%D8%B9%D8%B1%D9%81%D9%88%D8%A7%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%A7%D9%83%D9%84%20%D8%A7%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D8%B2%D8%B9%D8%AC%D8%A9%20%D9%88%D8%A7%D8%AF%D8%B9%D9%85%D9%88%D8%A7%20%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%84%D8%AA%D8%AD%D8%B3%D9%8A%D9%86%20%23%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D8%A8_%D8%A3%D9%88%D9%84%D9%88%D9%8A%D8%A9%20%23UX_AR%3A%20http%3A%2F%2Fperfectly-backwards.com" class="button twitter-button" target="_blank">
                 <i class="fab fa-twitter"></i> غرد بهذا
             </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://asimnet.github.io/Perfectly-Backwards/&title=Perfectly%20Backwards:%20دعم%20اللغات%20RTL&summary=أنا%20أدعم%20تحسين%20دعم%20اللغة%20العربية%20في%20المنتجات%20الرقمية!%20تعرف%20على%20مشروع%20Perfectly-Backwards%20لمعرفة%20المزيد%20حول%20إنشاء%20تجارب%20رقمية%20شاملة.&source=RTL%20Vision" class="button linkedin-button" target="_blank">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://perfectly-backwards.com&title=Perfectly%20Backwards:%20دعم%20اللغات%20RTL&summary=أنا%20أدعم%20تحسين%20دعم%20اللغة%20العربية%20في%20المنتجات%20الرقمية!%20تعرف%20على%20مشروع%20Perfectly-Backwards%20لمعرفة%20المزيد%20حول%20إنشاء%20تجارب%20رقمية%20شاملة.&source=RTL%20Vision" class="button linkedin-button" target="_blank">
                 <i class="fab fa-linkedin-in"></i> شارك على لينكد إن
             </a>
         </div>
@@ -272,7 +319,7 @@
 <footer>
     <p>Built to raise awareness | نحو عالم رقمي شامل | 2025</p>
     <p><small>ملاحظة: تم تصميم هذه الصفحة مع دعم كامل للغة العربية و RTL.</small></p>
-    <p><small>مشروع جيتهاب: <a href="https://asimnet.github.io/Perfectly-Backwards/" target="_blank">https://asimnet.github.io/Perfectly-Backwards/</a></small></p>
+    <p><small>مشروع جيتهاب: <a href="https://github.com/AsimNet/Perfectly-Backwards" target="_blank">https://github.com/AsimNet/Perfectly-Backwards</a></small></p>
 </footer>
 
 </body>

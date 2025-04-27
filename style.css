@@ -655,11 +655,11 @@ footer a:hover {
         max-width: 250px;
     }
 
-    .tweet-section {
+    .share-section {
         padding: var(--spacing-md);
     }
 
-    .tweet-box {
+    .share-box {
         padding: var(--spacing-md);
     }
 }
