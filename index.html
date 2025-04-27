@@ -89,6 +89,25 @@
             Imagine typing a message, and the cursor suddenly jumps to the wrong place. Or trying to select text, and the selection behaves erratically, grabbing parts you didn't intend. Punctuation often ends up at the beginning of a line instead of the end. Pasted text gets jumbled. This makes communication and documentation incredibly tedious.
         </p>
 
+        <h3>Illustrating the Problem: Mixed Text (Bidi) - توضيح المشكلة: النص المختلط</h3>
+        <p>
+            Below is a real example of the mixed text (Bidi) problem. A user is trying to write the following text in Arabic:
+            <strong>جمال اللغة يكمن في تفاصيلها، والـRTL ليس ترفا، بل ضرورة والسلام PEACE</strong>
+            (which means "The beauty of language lies in its details, and RTL is not a luxury, but a necessity and peace PEACE")
+        </p>
+        <p>
+            But as shown, there are problems with text ordering and cursor direction, making writing a frustrating experience.
+        </p>
+        <div class="gif-container" aria-label="Teams does not handle it correctly">
+            <img src="assets/teams.gif" alt="Example of mixed text (Bidi) problem" style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 10px;">
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #555;">Source: Microsoft Teams</p>
+        </div>
+
+        <div class="gif-container" aria-label="WhatsApp does it correctly">
+            <img src="assets/whatsapp.gif" alt="Example of correctly displaying mixed text (Bidi) in WhatsApp" style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 10px;">
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #555;">WhatsApp does it correctly! Not so difficult after all!</p>
+        </div>
+
         <div class="example">
             <p><strong>Example (Simulating Disruption with Spanish/English):</strong></p>
             <p>While English and Spanish are both LTR, imagine a system poorly handling mixed text snippets. This can create visual chaos *similar* to LTR/RTL Bidi failures. Consider trying to report a status:</p>
