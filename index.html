@@ -55,6 +55,37 @@
         header a:hover {
             border-bottom: 1px solid white;
         }
+
+        /* Floating solution button styles */
+        .floating-solution-btn {
+            position: fixed;
+            bottom: 30px;
+            background-color: #80519F;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .floating-solution-btn:hover {
+            background-color: #6b3d8c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .floating-solution-btn i {
+            margin-inline-start: 15px;
+        }
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,6 +99,11 @@
     <h1>Perfectly Backwards!</h1>
     <p><a href="arabic.html">اقرأها بالعربية</a></p>
 </header>
+
+<!-- Floating solution button -->
+<button class="floating-solution-btn" onclick="scrollToSolution()">
+    Skip to Solution <i class="fas fa-arrow-down"></i>
+</button>
 
 <main>
     <section id="intro">
@@ -309,6 +345,15 @@
     <p><small>GitHub Project: <a href="https://github.com/AsimNet/Perfectly-Backwards" target="_blank">https://github.com/AsimNet/Perfectly-Backwards</a></small></p>
 </footer>
 
+<script>
+    function scrollToSolution() {
+        // Scroll to the conclusion section which contains the solution
+        const solutionSection = document.getElementById('conclusion');
+        if (solutionSection) {
+            solutionSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 
 </body>
 </html>
